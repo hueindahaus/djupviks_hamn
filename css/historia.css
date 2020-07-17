@@ -1,0 +1,85 @@
+
+
+.row{
+  display: flex;
+  justify-content: center;
+}
+
+.black-box{
+  height: 40vh;
+  width: 50%;
+  background-color: black;
+}
+
+.black-box > h1{
+  font-family: Helvetica, sans-serif;
+  color: white;
+  font-weight: 400;
+  padding-top: 10vh;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.black-box > p{
+  color: white;
+  font-family: Lora, serif;
+  text-align: center;
+  font-size: 0.6rem;
+  margin-top: 0.2rem;
+}
+
+
+#opener{
+  width: 50%;
+  height: 40vh;
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+h2{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.body-text{
+  width: 80%;
+  color: #555;
+  white-space: pre-line;
+  margin: 0 auto;
+  font-family: Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+#konrad-img{
+  width: 20%;
+  padding: 1rem 0;
+  display: block;
+  margin: 0 auto;
+}
+
+figcaption{
+  font-family: Helvetica, sans-serif;
+  font-size: 0.6rem;
+  text-align: center;
+  font-style: italic;
+}
+
+#name-explanation-title{
+  width: 80%;
+  margin:0 auto;
+  font-family: Helvetica, sans-serif;
+  font-weight: 600;
+  padding-top: 2rem;
+}
+
+#name-explanation-list{
+  width: 80%;
+  margin:0 auto;
+  font-family: Helvetica, sans-serif;
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}

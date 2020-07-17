@@ -51,6 +51,7 @@ ul{
 }
 
 
+
 /* css that applies to small devices such as mobile phones*/
 @media(min-width: 320px){
   .navbar{

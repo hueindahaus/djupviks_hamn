@@ -76,7 +76,7 @@ main{
   max-width: 40vw;
   padding-left: 1rem;
   line-height: 1.6;
-  color:rgba(0,0,0,0.8);
+  color: #555;
 }
 
 .img-right{
@@ -94,7 +94,7 @@ main{
   max-width: 40vw;
   padding-right: 1rem;
   line-height: 1.6;
-  color:rgba(0,0,0,0.8);
+  color: #555;
 }
 
 .button-group{
