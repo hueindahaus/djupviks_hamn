@@ -1,0 +1,131 @@
+#news-widget{
+  margin-left:1rem;
+  width: 40vw;
+}
+
+.news{
+  width: 100%;
+  min-height: 24vh;
+  margin-bottom: 1rem;
+  background-color: black;
+  z-index: 1;
+  position: relative;
+}
+
+.news-title{
+  font-family: Helvetica, sans-serif;
+  font-size: 1rem;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  bottom:1rem;
+  left:5%;
+  transform: 0;
+  transition: all 0.3s;
+}
+
+.news-date{
+  font-family: Helvetica, sans-serif;
+  font-size: 0.5rem;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  bottom: 0.6rem;
+  left:5%;
+  transform: 0;
+  transition: all 0.3s;
+}
+
+.news-type{
+  font-family: Helvetica, sans-serif;
+  font-size: 0.8rem;
+  color: white;
+  z-index: 1;
+  position: absolute;
+  right:5%;
+  
+}
+
+.overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.4);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  transition: background-color 0.3s;
+}
+
+.news > img{
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.news:hover > .overlay{
+  background-color: rgba(0,0,0,0.8);
+}
+
+.news:hover > .news-title{
+  transform: translate(2rem, 0);
+}
+
+.news:hover > .news-date{
+  transform: translate(2rem, 0);
+}
+
+.news-text{
+  display: block;
+  color: white;
+  margin: 0 auto;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+  width: 80%;
+  font-size: 1.2vw;
+  transition: height 0.3s;
+}
+
+#news1{
+  height: 0px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+#news2{
+  height: 0px;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+.toggle{
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  opacity: 0;
+  z-index: 2;
+}
+
+.toggle:checked ~ #news1{
+  opacity: 1;
+  height: 8vw;
+}
+
+.toggle:checked ~ #news2{
+  opacity: 1;
+  height: 23vw;
+}
+
+
+.toggle:checked ~ .overlay{
+  background-color: rgba(0,0,0,0);
+}
+
+.toggle:checked ~ img{
+  opacity: 0;
+}

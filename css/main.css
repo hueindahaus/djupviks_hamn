@@ -1,0 +1,163 @@
+/* Stylesheet for general elements like the navbar, footer etc */
+
+@font-face{
+  font-family: 'Open Sans', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+}
+
+html{
+  font-size: 100%;
+  font-family: Helvetica, sans-serif;
+}
+
+ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#contact-button{
+  background: url('../icons/mail.svg') no-repeat;
+  background-position: 0.6rem 0.6rem;
+  background-size: 0.8rem;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.8);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100rem;
+  position: fixed;
+  transition: width 0.3s, background-color 0.3s;
+}
+
+#contact-button:hover{
+  width: 4rem;
+  background-color: rgba(0,0,0,1); ;
+}
+
+#contact-button::after{
+  content: "";
+  font-size: 0.5rem;
+  color: white;
+  position: absolute;
+  bottom: 0.7rem;
+  left: 1.6rem;
+  opacity: 0;
+  transition: opacity 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#contact-button:hover::after{
+  content: "Kontakt";
+  opacity: 1;
+}
+
+
+/* css that applies to small devices such as mobile phones*/
+@media(min-width: 320px){
+  .navbar{
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    min-width: 100%;
+    bottom: 0;
+    z-index: 999;
+  }
+
+  .navelem{
+    width: 20%;
+  }
+
+  .navelem > a{
+    display: block;
+    min-height: 2.6rem;
+    max-width: 100%;
+    color: transparent;    
+  }
+
+  #home-link{
+    background: url('../icons/home.svg') no-repeat center center;
+  }
+
+  #tourism-link{
+    background: url('../icons/map-pin.svg') no-repeat center center;
+  }
+
+  #history-link{
+    background: url('../icons/info.svg') no-repeat center center;
+  }
+
+  #member-link{
+    background: url('../icons/users.svg') no-repeat center center;
+  }
+
+  #contact-button{
+    top: 4vh;
+    left: unset;
+    right: 4vw;
+  }
+  
+}
+
+/* css that applies to bigger screens like laptops, desktops etc. */
+@media(min-width: 769px){
+
+  .navbar{
+    top:0;
+    bottom: unset;
+  }
+
+  .navelem{
+    max-width: 6rem;
+  }
+
+  .navelem > a{
+    text-decoration: none;
+    font-size: 0.5rem;
+    padding: 0.4rem 0;
+    min-height: unset;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 100p;
+    text-transform: uppercase;
+  }
+
+  .navelem > a::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 1px;
+    background: #000000;
+    transition: width 0.3s;
+  }
+
+  .navelem > a:hover::after{
+    background: #FFFFFF;
+    width: 60%;
+    margin-left: 20%;
+  }
+
+
+  #home-link{
+    background: none;
+  }
+
+  #tourism-link{
+    background: none;
+  }
+
+  #history-link{
+    background: none;
+  }
+
+  #member-link{
+    background: none;
+  }
+
+  #contact-button{
+    top:unset;
+    right:unset;
+    bottom: 4vh;
+    left: 4vw;
+  }
+
+}
