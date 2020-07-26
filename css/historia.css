@@ -28,9 +28,12 @@
   margin-top: 0.6rem;
 }
 
-
-#opener{
+.opener-container{
   width: 50%;
+}
+
+.opener{
+  width: 100%;
   height: 40vh;
   object-fit: cover;
   object-position: center bottom;

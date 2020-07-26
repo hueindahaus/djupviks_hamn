@@ -57,7 +57,7 @@
   transition: background-color 0.3s;
 }
 
-.news > img{
+.news >picture > img{
   top: 0;
   left: 0;
   position: absolute;
@@ -126,7 +126,7 @@
   background-color: rgba(0,0,0,0);
 }
 
-.toggle:checked ~ img{
+.toggle:checked ~ picture{
   opacity: 0;
 }
 

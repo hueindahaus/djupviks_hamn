@@ -38,7 +38,12 @@
           <h1>Djupviks Historia</h1>
           <p>"Hjärtat i den svenska idyllen"</p>
         </div>
-        <img id="opener" src="../images/D-13.jpg" alt="">
+        <picture class="opener-container">
+          <source media="(max-width:425px)" srcset="../images/D-13.jpg">
+          <source media="(max-width:768px)" srcset="../images/D-13.jpg">
+          <img class="opener" src="../images/D-13.jpg" alt="En klippa vid det blåa vattnet">
+        </picture>
+        
       </div>
     </header>
 
@@ -58,7 +63,12 @@
               
             
             <figure id="konrad-img">
-              <img  src="../images/Konrad.jpg" alt="Gammal bild på Konrad Jakobsson, Tomsarve" style="width:100%">
+              <picture>
+                <source media="(max-width:425px)" srcset="../images/Konrad.jpg">
+                <source media="(max-width:768px)" srcset="../images/Konrad.jpg">
+                <img  src="../images/Konrad.jpg" alt="Gammal bild på Konrad Jakobsson, Tomsarve" style="width:100%">
+              </picture>
+              
               <figcaption>Konrad Jakobsson, Tomsarve</figcaption>
             </figure>
               
