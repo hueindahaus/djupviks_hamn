@@ -26,7 +26,7 @@
         <li class="navelem"><a href="../index.html" id="home-link" title="link to homepage">startsida</a></li>
         <li class="navelem"><a href="./turism.html" id="tourism-link" title="link to tourism-page">turism</a></li>
         <li class="navelem"><a href="./historia.html" id="history-link" title="link to history-page">historia</a></li>
-        <li class="navelem"><a href="#" id="member-link" title="link to member-page">medlemsinfo</a></li>
+        <li class="navelem"><a href="./medlemsinfo.html" id="member-link" title="link to member-page">medlemsinfo</a></li>
       </ul>
 
       <a href="#" title="link to contact-page" id="contact-button"></a>
@@ -37,14 +37,96 @@
     </header>
 
     <main>
-        
+        <section>
+          <div id="container">
+            <div id="decoration-image"></div>
+            <form action="">
+              <div class="row">
+                <div class="col-25">
+                  <label for="subject">Rubrik för ärende:</label>
+                </div>
+                <div class="col-75">
+                  <input type="text" id="subject" name="input-heading" placeholder="Skriv rubrik här">
+                </div>
+              </div>
 
-    
+              <div class="row">
+                <div class="col-25">
+                  <label for="concerning">Vad gäller ärendet?</label>
+                </div>
+                <div class="col-75">
+                  <select id="concerning">
+                    <option value="övrigt">Övrigt</option>
+                    <option value="båtplats">Båtplats</option>
+                    <option value="medlemskap">Medlemskap</option>
+                  </select>
+                </div>
+              </div>
 
+              <div class="row">
+                <div class="col-25">
+                  <label for="email">Email:</label>
+                </div>
+                <div class="col-75">
+                  <input type="email" id="email" name="input-email" placeholder="foo@bar.com">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="phone">Telefon:</label>
+                </div>
+                <div class="col-75">
+                  <input type="tel" id="phone" name="input-phone" placeholder="+46712345678">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="contact-way">Kontakta mig via:</label>
+                </div>
+                <div class="col-75">
+                  <select id="contact-way">
+                    <option value="email">Email</option>
+                    <option value="telephone">Telefon</option>
+                    <option value="none">Kontakta inte mig</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-25">
+                  <label for="description">Subject:</label>
+                </div>
+                <div class="col-75">
+                  <textarea id="description" name="detail" placeholder="Beskrivning"></textarea>
+                </div>
+              </div>
+
+              <div class="row" id="submit-row">
+                <input type="submit" value="Skicka">
+              </div>
+            </form>
+          
+              
+          </div>
+        </section>
+
+        <aside>
+          <p>
+            Kontaktuppgifter
+            Hamnfogde Bo Lautin, mobil 0707-920310
+
+            Djupviks hamnförening
+            c/o Ekholm
+            Eksta Hägur 170
+            623 54 Klintehamn
+          </p>
+        </aside>
     </main>
   
     <footer>
-
+      <p>Djupviks hamn fiskeförening © 2020. E-post: info@djupvikshamn.se</p>
     </footer>
 
   </body>

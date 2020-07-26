@@ -1,6 +1,6 @@
 #news-widget{
-  margin-left:1rem;
-  width: 40vw;
+  margin-top: 1rem;
+  display: block;
 }
 
 .news{
@@ -86,7 +86,7 @@
   padding-bottom: 5rem;
   padding-top: 2rem;
   width: 80%;
-  font-size: 1.2vw;
+  font-size: 2vw;
   transition: height 0.3s;
 }
 
@@ -129,3 +129,17 @@
 .toggle:checked ~ img{
   opacity: 0;
 }
+
+@media(min-width: 769px){
+  #news-widget{
+    margin-left:1rem;
+    width: 40vw;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .news-text{
+    font-size: 1.2vw;
+  }
+}
+

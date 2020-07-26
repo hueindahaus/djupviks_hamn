@@ -4,9 +4,10 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  width: 40vw;
+  
   height: 50vh;
-  margin-right: 1rem;
+  
+  display: block;
 }
 
 th {
@@ -38,4 +39,11 @@ td {
   border-collapse: collapse; 
 }
 
+
+@media(min-width: 769px){
+  #smhi-widget{
+    width: 40vw;
+    margin-right: 1rem;
+  }
+}
 
