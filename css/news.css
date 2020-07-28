@@ -20,7 +20,7 @@
   position: absolute;
   bottom:1rem;
   left:5%;
-  transform: 0;
+  transform: initial;
   transition: all 0.3s;
 }
 
@@ -32,7 +32,7 @@
   position: absolute;
   bottom: 0.6rem;
   left:5%;
-  transform: 0;
+  transform: initial;
   transition: all 0.3s;
 }
 
@@ -128,6 +128,10 @@
 
 .toggle:checked ~ picture{
   opacity: 0;
+}
+
+.toggle:focus ~ .news-title{
+  border: 2px white solid;
 }
 
 @media(min-width: 769px){

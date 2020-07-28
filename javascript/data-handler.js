@@ -5,7 +5,7 @@ export async function fetchData(){
   const response = await fetch('https://opendata-download-metfcst.smhi.se/api/category/pmp3g/version/2/geotype/point/lon/18.1489/lat/57.3081/data.json');
   let json = await response.json();
   let timeSeries = json.timeSeries;
-  console.dir(timeSeries);
+  //console.dir(timeSeries);
   
   if(response.status == 200){
     let results = new Array(6);
@@ -35,7 +35,6 @@ export async function fetchData(){
         results[5] = createWeatherObject(offset30, timeSeries[i], symbolMap);
       }
     }
-    console.dir(results);
     return results;
   } else {
     return undefined;
@@ -44,8 +43,30 @@ export async function fetchData(){
 }
 
 function createWeatherObject(date, forecast, symbolMap){
-  let weather = new Weather(date, forecast.parameters[11].values[0], forecast.parameters[13].values[0], forecast.parameters[14].values[0], symbolMap.get(forecast.parameters[18].values[0]));
-  console.dir(weather);
+
+  let temperature = 0;
+  let windSpeed = 0;
+  let windDirection = 0;
+  let symbol = 1;
+
+  let parameters = forecast.parameters;
+  
+  //the smhi api is inconsistent and therefore we need to search the array for corresponding values
+  for(let i = 0; i < parameters.length; i++){
+    if(parameters[i].name === "t"){
+      temperature = parameters[i].values[0];
+    } else if(parameters[i].name === "ws"){
+      windSpeed = parameters[i].values[0];
+    } else if(parameters[i].name === "wd"){
+      windDirection = parameters[i].values[0];
+    } else if(parameters[i].name === "Wsymb2"){
+      symbol = parameters[i].values[0];
+    }
+  }
+
+
+  let weather = new Weather(date, temperature, windDirection, windSpeed, symbolMap.get(symbol));
+  //console.dir(weather);
   return weather;
 }
 
