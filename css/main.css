@@ -17,7 +17,7 @@ ul{
 }
 
 #contact-button{
-  background: url('../icons/mail.svg') no-repeat;
+  background: url('../icons/mail.png') no-repeat;
   background-color: rgba(0,0,0,0.8);
   background-position: 0.8rem, 0.8rem;
   background-size: 1.4rem;
@@ -83,19 +83,19 @@ img{
   }
 
   #home-link{
-    background: url('../icons/home.svg') no-repeat center center;
+    background: url('../icons/home.png') no-repeat center center;
   }
 
   #tourism-link{
-    background: url('../icons/map-pin.svg') no-repeat center center;
+    background: url('../icons/map-pin.png') no-repeat center center;
   }
 
   #history-link{
-    background: url('../icons/info.svg') no-repeat center center;
+    background: url('../icons/info.png') no-repeat center center;
   }
 
   #member-link{
-    background: url('../icons/users.svg') no-repeat center center;
+    background: url('../icons/users.png') no-repeat center center;
   }
 
   #contact-button{
